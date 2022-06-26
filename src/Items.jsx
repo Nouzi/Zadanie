@@ -22,7 +22,6 @@ function Items() {
 
 
         let deleteItem = (id) => {
-        console.log(id)
         lib.delete(`${id}`).then(
             (response) => {
                 console.log(response)
@@ -68,7 +67,7 @@ function Items() {
                         <Typography component="p">{unixTime}</Typography>
 
                         <form>
-                                    <button onClick={deleteItem(item.id)}>Delete Item</button>
+                                    <small onClick={ () => deleteItem( item.id ) }>Delete Item</small>
                         </form>
                     </Stack>
                 )
